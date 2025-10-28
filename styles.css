@@ -1,0 +1,1192 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 헤더 */
+.header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* 데스크톱 네비게이션 */
+.nav-desktop {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li a {
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.nav-list li a:hover {
+    color: #2563eb;
+    background: #f1f5f9;
+}
+
+/* 모바일 메뉴 토글 버튼 */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    gap: 4px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #64748b;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* 모바일 네비게이션 */
+.nav-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 1001;
+    transition: right 0.3s ease;
+}
+
+.nav-mobile.active {
+    right: 0;
+}
+
+.nav-mobile-content {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-mobile-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2563eb;
+    margin: 0;
+}
+
+.nav-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #64748b;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-mobile-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.nav-mobile-list li {
+    margin-bottom: 15px;
+}
+
+.nav-mobile-list li a {
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 12px 0;
+    display: block;
+    border-bottom: 1px solid #f1f5f9;
+    transition: color 0.3s ease;
+}
+
+.nav-mobile-list li a:hover {
+    color: #2563eb;
+}
+
+/* 모바일 오버레이 */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.cta-button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+
+/* 통계 섹션 */
+.stats {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.stats h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #1e293b;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 18px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* 추천 상황 섹션 */
+.recommendation {
+    padding: 80px 0;
+    background: white;
+}
+
+.recommendation h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #1e293b;
+}
+
+.checklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.check-icon {
+    background: #10b981;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* 올인페이란 섹션 */
+.about {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1e293b;
+}
+
+.about-description {
+    text-align: center;
+    font-size: 20px;
+    color: #64748b;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.feature {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.feature h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.feature p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* 대출 진행방식 섹션 */
+.process {
+    padding: 80px 0;
+    background: white;
+}
+
+.process h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.process-intro {
+    text-align: center;
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.step {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f8fafc;
+    border-radius: 15px;
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: #2563eb;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.step h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+.step p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* 비교표 섹션 */
+.comparison {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.comparison h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #1e293b;
+}
+
+/* 새로운 카드 형태 비교 디자인 */
+.comparison-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.comparison-item {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.comparison-category {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.comparison-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.comparison-card {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.comparison-card.our-service {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.comparison-card.traditional {
+    background: #f1f5f9;
+    color: #64748b;
+}
+
+.comparison-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.comparison-card p {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* 기존 테이블 스타일 (데스크톱용) */
+.comparison-table {
+    overflow-x: auto;
+}
+
+.comparison-table table {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    min-width: 600px;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.comparison-table th {
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.comparison-table td {
+    font-size: 16px;
+    color: #64748b;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* 모바일 비교표 개선 */
+@media (max-width: 768px) {
+    .comparison {
+        padding: 60px 0;
+    }
+    
+    .comparison h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    
+    .comparison-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .comparison-item {
+        padding: 20px;
+    }
+    
+    .comparison-category {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .comparison-content {
+        gap: 10px;
+    }
+    
+    .comparison-card {
+        padding: 15px;
+    }
+    
+    .comparison-card h4 {
+        font-size: 13px;
+    }
+    
+    .comparison-card p {
+        font-size: 12px;
+    }
+    
+    /* 기존 테이블 숨기기 */
+    .comparison-table {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .comparison h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .comparison-cards {
+        gap: 15px;
+    }
+    
+    .comparison-item {
+        padding: 15px;
+    }
+    
+    .comparison-category {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    
+    .comparison-card {
+        padding: 12px;
+    }
+    
+    .comparison-card h4 {
+        font-size: 12px;
+    }
+    
+    .comparison-card p {
+        font-size: 11px;
+    }
+}
+
+/* 대출 신청 전 확인사항 */
+.requirements {
+    padding: 80px 0;
+    background: white;
+}
+
+.requirements h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #1e293b;
+}
+
+.requirement-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.requirement-card {
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.requirement-card.available {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.requirement-card.unavailable {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+.requirement-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.requirement-card ul {
+    list-style: none;
+}
+
+.requirement-card li {
+    padding: 8px 0;
+    font-size: 16px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.requirement-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* 대출금 결제방법 섹션 */
+.payment-method {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.payment-method h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #1e293b;
+}
+
+.payment-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.payment-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.payment-info p {
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.payment-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-step {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.step-icon {
+    width: 30px;
+    height: 30px;
+    background: #2563eb;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.recommended-users {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.recommended-users h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.recommended-users ul {
+    list-style: none;
+}
+
+.recommended-users li {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #64748b;
+    position: relative;
+    padding-left: 20px;
+}
+
+.recommended-users li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+/* 대출수수료 안내 섹션 */
+.fees {
+    padding: 80px 0;
+    background: white;
+}
+
+.fees h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #1e293b;
+}
+
+.fee-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.fee-item {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.fee-range {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.fee-rate {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.fee-note {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* 고객 후기 섹션 */
+.reviews {
+    padding: 80px 0;
+    background: #f8fafc;
+    overflow: hidden;
+}
+
+.reviews h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #1e293b;
+}
+
+.reviews-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 30px;
+    animation: scroll-reviews 40s linear infinite;
+    width: max-content;
+}
+
+.reviews-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-reviews {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.review-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 300px;
+    flex-shrink: 0;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.review-rating {
+    color: #fbbf24;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.reviewer {
+    font-size: 14px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* 자주하는 질문 섹션 */
+.faq {
+    padding: 80px 0;
+    background: white;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #1e293b;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.faq-toggle {
+    font-size: 24px;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding: 0 0 25px 0;
+    display: none;
+}
+
+.faq-answer p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+/* 카톡신청 버튼 */
+.kakao-application {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #e2e8f0;
+}
+
+.kakao-btn {
+    background: #fee500;
+    color: #3c1e1e;
+    border: none;
+    padding: 18px 25px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(254, 229, 0, 0.4);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.kakao-btn:hover {
+    background: #fdd835;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(254, 229, 0, 0.5);
+}
+
+.kakao-icon {
+    font-size: 22px;
+}
+
+/* 플로팅 버튼들 */
+.floating-buttons {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.floating-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.phone-btn {
+    background: #10b981;
+    color: white;
+}
+
+.phone-btn:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.top-btn {
+    background: #2563eb;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.top-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.floating-btn span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 모바일에서 플로팅 버튼 위치 조정 */
+@media (max-width: 768px) {
+    .floating-buttons {
+        bottom: 120px;
+        right: 15px;
+        gap: 12px;
+    }
+    
+    .floating-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    .floating-btn span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-buttons {
+        bottom: 110px;
+        right: 10px;
+        gap: 10px;
+    }
+    
+    .floating-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .floating-btn span {
+        font-size: 16px;
+    }
+}
+
+/* 히어로 섹션 */
+.hero {
+    background: url('images/hero-bg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+    min-height: 600px;
+    max-height: 800px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+    .hero {
+        height: calc(100vh - 70px);
+        min-height: 500px;
+        max-height: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background: url('images/hero-m.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 70vh;
+        min-height: 600px;
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        background: url('images/hero-m.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 60vh;
+        min-height: 500px;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .header .container {
+        justify-content: space-between;
+    }
+    
+    .checklist {
+        grid-template-columns: 1fr;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .requirement-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .payment-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .fee-table {
+        grid-template-columns: 1fr;
+    }
+    
+    .reviews-track {
+        gap: 20px;
+    }
+    
+    .review-card {
+        min-width: 280px;
+    }
+    
+    .comparison-table {
+        font-size: 14px;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 15px 10px;
+    }
+}
+
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 36px;
+    }
+    
+    .kakao-application {
+        padding: 12px 15px;
+    }
+    
+    .kakao-btn {
+        padding: 16px 20px;
+        font-size: 16px;
+    }
