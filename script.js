@@ -110,10 +110,25 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // 신청하기 버튼 클릭 이벤트
-document.querySelector('.cta-button').addEventListener('click', function() {
-    // 실제 신청 페이지로 이동
-    alert('대출 신청 페이지로 이동합니다.');
-    // window.location.href = '신청 페이지 URL';
+document.addEventListener('DOMContentLoaded', function() {
+    const ctaButton = document.querySelector('.cta-button');
+    if (ctaButton) {
+        ctaButton.addEventListener('click', function() {
+            // 실제 신청 페이지로 이동
+            alert('대출 신청 페이지로 이동합니다.');
+            // window.location.href = '신청 페이지 URL';
+        });
+    }
+    
+    // 카톡신청 버튼 클릭 이벤트
+    const kakaoBtn = document.querySelector('.kakao-btn');
+    if (kakaoBtn) {
+        kakaoBtn.addEventListener('click', function() {
+            // 실제 카카오톡 신청으로 이동
+            alert('카카오톡 신청으로 연결됩니다.');
+            // window.location.href = '카카오톡 신청 URL';
+        });
+    }
 });
 
 // 숫자 카운트 애니메이션

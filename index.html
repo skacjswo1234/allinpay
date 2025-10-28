@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>올인페이 - 신용카드 한도 활용 대출</title>
+    <title>올인페이 - 신용카드 한도 활용 정기 결제 서비스</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -12,21 +12,20 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>올인페이</h1>
+                <h1>AllinPay</h1>
             </div>
             <nav class="nav-desktop">
                 <ul class="nav-list">
                     <li><a href="#hero">홈</a></li>
                     <li><a href="#stats">고객현황</a></li>
-                    <li><a href="#recommendation">추천상황</a></li>
-                    <li><a href="#about">올인페이란</a></li>
-                    <li><a href="#process">진행방식</a></li>
                     <li><a href="#comparison">차이점</a></li>
+                    <li><a href="#payment-items">결제항목</a></li>
                     <li><a href="#requirements">자격조건</a></li>
+                    <li><a href="#realestate">부동산결제</a></li>
                     <li><a href="#payment-method">결제방법</a></li>
                     <li><a href="#fees">수수료</a></li>
                     <li><a href="#reviews">후기</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#faq">Q&A</a></li>
                 </ul>
             </nav>
             <button class="mobile-menu-toggle">
@@ -41,240 +40,342 @@
     <nav class="nav-mobile">
         <div class="nav-mobile-content">
             <div class="nav-mobile-header">
-                <h3>올인페이</h3>
+                <h3>AllinPay</h3>
                 <button class="nav-close">×</button>
             </div>
             <ul class="nav-mobile-list">
                 <li><a href="#hero">홈</a></li>
                 <li><a href="#stats">고객현황</a></li>
-                <li><a href="#recommendation">추천상황</a></li>
-                <li><a href="#about">올인페이란</a></li>
-                <li><a href="#process">진행방식</a></li>
                 <li><a href="#comparison">차이점</a></li>
+                <li><a href="#payment-items">결제항목</a></li>
                 <li><a href="#requirements">자격조건</a></li>
+                <li><a href="#realestate">부동산결제</a></li>
                 <li><a href="#payment-method">결제방법</a></li>
                 <li><a href="#fees">수수료</a></li>
                 <li><a href="#reviews">후기</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#faq">Q&A</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- 히어로 섹션 -->
     <section class="hero" id="hero">
+        <img src="images/000.png" alt="올인페이 히어로 포스터" class="hero-full-poster">
     </section>
 
-    <!-- 고객 수치 섹션 -->
-    <section class="stats" id="stats">
-        <div class="container">
-            <h2>수많은 고객이 선택한 올인페이 대출</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">50,000+</div>
-                    <div class="stat-label">누적 대출 고객</div>
+<!-- 9번째 섹션: 후기 -->
+<section class="reviews" id="reviews">
+    <div class="container">
+        <h2>실제 사용 고객들의 후기</h2>
+        <div class="reviews-container">
+            <div class="reviews-track">
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"급한 돈이 필요했는데 5분 만에 승인받아서 정말 도움이 됐어요. 서류도 복잡하지 않아서 좋았습니다."</p>
+                    <div class="reviewer">김○○님</div>
                 </div>
-                <div class="stat-item">
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"신용등급이 낮아서 일반 정기 결제 서비스이 어려웠는데, 카드 한도로 정기 결제 서비스받을 수 있어서 정말 감사해요."</p>
+                    <div class="reviewer">이○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"온라인으로 간단하게 신청하고 바로 입금받아서 편리했습니다. 상환도 카드 결제일과 같아서 관리하기 쉬워요."</p>
+                    <div class="reviewer">박○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"비상금이 급히 필요했는데 올인페이 덕분에 빠르게 해결할 수 있었어요. 정말 감사합니다!"</p>
+                    <div class="reviewer">최○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"소득증빙 서류 준비가 번거로웠는데, 카드 한도만으로 정기 결제 서비스받을 수 있어서 너무 편했어요."</p>
+                    <div class="reviewer">정○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"은행 정기 결제 서비스은 시간이 오래 걸려서 포기했는데, 올인페이는 정말 빠르네요. 추천합니다!"</p>
+                    <div class="reviewer">한○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"신용카드 한도는 충분한데 현금이 부족했을 때 정말 유용했어요. 간편하고 빠릅니다."</p>
+                    <div class="reviewer">조○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"복잡한 심사 과정 없이 바로 승인받아서 놀랐어요. 정말 신기한 서비스입니다."</p>
+                    <div class="reviewer">윤○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"상환도 카드 결제일과 같아서 관리하기 편해요. 별도 계좌 관리할 필요가 없어서 좋습니다."</p>
+                    <div class="reviewer">강○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"금융감독원 등록 업체라서 안전하다고 생각했는데, 실제로도 믿을 만한 서비스네요."</p>
+                    <div class="reviewer">송○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"온라인으로 간단하게 신청할 수 있어서 좋아요. 방문할 필요도 없고 정말 편리합니다."</p>
+                    <div class="reviewer">임○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"수수료도 합리적이고, 정기 결제 서비스 과정도 투명해서 믿고 이용할 수 있어요."</p>
+                    <div class="reviewer">오○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"급전이 필요했는데 하루 만에 해결할 수 있어서 정말 다행이었어요. 감사합니다!"</p>
+                    <div class="reviewer">서○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"신용등급 때문에 일반 정기 결제 서비스이 어려웠는데, 올인페이 덕분에 원하는 금액을 받을 수 있었어요."</p>
+                    <div class="reviewer">노○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"카드 한도 활용 정기 결제 서비스이라는 개념이 신기했는데, 실제로 정말 유용하네요."</p>
+                    <div class="reviewer">배○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"고객센터 상담도 친절하고, 궁금한 점들을 잘 설명해주셔서 좋았어요."</p>
+                    <div class="reviewer">문○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"정기 결제 서비스 신청부터 입금까지 정말 빠르네요. 급한 상황에서 정말 도움이 됐습니다."</p>
+                    <div class="reviewer">양○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"신용카드만 있으면 누구나 이용할 수 있어서 좋아요. 진입장벽이 낮습니다."</p>
+                    <div class="reviewer">구○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"상환 방법도 간단하고, 이자 계산도 투명해서 믿고 이용할 수 있어요."</p>
+                    <div class="reviewer">신○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"비상금 마련이 어려웠는데 올인페이 덕분에 쉽게 해결할 수 있었어요. 추천합니다!"</p>
+                    <div class="reviewer">허○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"온라인 신청이 정말 간단해요. 복잡한 절차 없이 바로 승인받을 수 있어서 좋습니다."</p>
+                    <div class="reviewer">고○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"신용카드 한도 내에서 자유롭게 정기 결제 서비스받을 수 있어서 정말 편리해요."</p>
+                    <div class="reviewer">민○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"급한 현금이 필요할 때 정말 유용한 서비스입니다. 빠르고 간편해요."</p>
+                    <div class="reviewer">유○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"정기 결제 서비스 과정이 투명하고, 수수료도 합리적이어서 만족스러워요."</p>
+                    <div class="reviewer">전○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"신용등급이 낮아도 카드 한도만 있으면 이용할 수 있어서 정말 좋아요."</p>
+                    <div class="reviewer">지○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"상환도 카드 결제일과 같아서 관리하기 편하고, 별도 절차가 없어서 좋습니다."</p>
+                    <div class="reviewer">차○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"금융감독원 등록 업체라서 안전하다고 생각했는데, 실제로도 믿을 만해요."</p>
+                    <div class="reviewer">안○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"복잡한 서류 준비 없이 온라인으로 간단하게 신청할 수 있어서 정말 편리해요."</p>
+                    <div class="reviewer">홍○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"정기 결제 서비스 승인까지 5분도 안 걸려서 정말 놀랐어요. 빠르고 효율적입니다."</p>
+                    <div class="reviewer">표○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"신용카드 한도 활용 정기 결제 서비스이라는 새로운 개념이 정말 유용하네요. 추천합니다!"</p>
+                    <div class="reviewer">남○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"급전이 필요했는데 하루 만에 해결할 수 있어서 정말 다행이었어요."</p>
+                    <div class="reviewer">도○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"온라인으로 간단하게 신청하고 바로 입금받아서 편리했습니다. 상환도 카드 결제일과 같아서 관리하기 쉬워요."</p>
+                    <div class="reviewer">라○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"신용등급이 낮아서 일반 정기 결제 서비스이 어려웠는데, 카드 한도로 정기 결제 서비스받을 수 있어서 정말 감사해요."</p>
+                    <div class="reviewer">마○○님</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-rating">★★★★★</div>
+                    <p class="review-text">"급한 돈이 필요했는데 5분 만에 승인받아서 정말 도움이 됐어요. 서류도 복잡하지 않아서 좋았습니다."</p>
+                    <div class="reviewer">바○○님</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 2번째 섹션: 고객현황 -->
+    <section class="poster-section-with-text" id="stats">
+    <img src="images/004.png" alt="올인페이 네번째 포스터" class="poster-image">
+    <div class="poster-overlay">
+        <div class="stats-content">
+            <h2>수많은 고객이 선택한 올인페이</h2>
+            <div class="stats-grid-overlay">
+                <div class="stat-item-overlay">
+                    <div class="stat-number">50,000+</div>
+                    <div class="stat-label">누적 이용 고객</div>
+                </div>
+                <div class="stat-item-overlay">
                     <div class="stat-number">98%</div>
                     <div class="stat-label">고객 만족도</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item-overlay">
                     <div class="stat-number">5분</div>
                     <div class="stat-label">평균 승인 시간</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item-overlay">
                     <div class="stat-number">₩500억+</div>
-                    <div class="stat-label">누적 대출 금액</div>
+                    <div class="stat-label">누적 결제 금액</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 추천 상황 섹션 -->
-    <section class="recommendation" id="recommendation">
-        <div class="container">
-            <h2>올인페이 이런 상황에 추천합니다</h2>
-            <div class="checklist">
-                <div class="check-item">
-                    <span class="check-icon">✓</span>
-                    <span>급한 현금이 필요한데 은행 대출은 시간이 오래 걸릴 때</span>
-                </div>
-                <div class="check-item">
-                    <span class="check-icon">✓</span>
-                    <span>소득증빙 서류 준비가 번거로울 때</span>
-                </div>
-                <div class="check-item">
-                    <span class="check-icon">✓</span>
-                    <span>신용등급이 낮아 일반 대출이 어려울 때</span>
-                </div>
-                <div class="check-item">
-                    <span class="check-icon">✓</span>
-                    <span>복잡한 심사 과정 없이 빠른 승인을 원할 때</span>
-                </div>
-                <div class="check-item">
-                    <span class="check-icon">✓</span>
-                    <span>신용카드 한도는 충분하지만 현금이 부족할 때</span>
-                </div>
-                <div class="check-item">
-                    <span class="check-icon">✓</span>
-                    <span>비상금이나 급전이 필요할 때</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 올인페이란 섹션 -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2>올인페이란?</h2>
-            <div class="about-content">
-                <p class="about-description">
-                    신용카드 한도를 활용해, 소득증빙 없이 간편하게 현금을 마련할 수 있는 신개념 대출서비스입니다.
-                </p>
-                <div class="features">
-                    <div class="feature">
-                        <h3>간편한 신청</h3>
-                        <p>복잡한 서류 없이 온라인으로 간단하게 신청</p>
-                    </div>
-                    <div class="feature">
-                        <h3>빠른 승인</h3>
-                        <p>5분 내 신용카드 한도 기반 즉시 승인</p>
-                    </div>
-                    <div class="feature">
-                        <h3>안전한 서비스</h3>
-                        <p>금융감독원 등록 업체로 안전하게 이용</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 대출 진행방식 섹션 -->
-    <section class="process" id="process">
-        <div class="container">
-            <h2>올인페이 대출 진행방식</h2>
-            <p class="process-intro">
-                일반적인 대출과 달리, 신용카드 결제를 기반으로 현금이 입금되는 구조입니다.<br>
-                복잡한 심사없이, 아래 3단계면 끝납니다.
-            </p>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>신용카드 한도로 대출 금액만큼 결제</h3>
-                    <p>원하는 대출 금액을 신청하고 신용카드로 결제합니다.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>결제 확인 후 수수료 제외 입금</h3>
-                    <p>결제가 확인되면 수수료를 제외한 금액이 계좌로 입금됩니다.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>간편한 상환</h3>
-                    <p>신용카드 결제일과 동일하게 상환하시면 됩니다.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 차이점 비교 섹션 -->
+    <!-- 3번째 섹션: 차이점 -->
     <section class="comparison" id="comparison">
-        <div class="container">
-            <h2>올인페이 대출과 기존 대출의 차이점</h2>
-            <div class="comparison-cards">
-                <div class="comparison-item">
-                    <div class="comparison-category">신청 방법</div>
-                    <div class="comparison-content">
-                        <div class="comparison-card our-service">
-                            <h4>올인페이 대출</h4>
-                            <p>온라인 간편 신청</p>
-                        </div>
-                        <div class="comparison-card traditional">
-                            <h4>기존 대출</h4>
-                            <p>방문 또는 복잡한 서류</p>
-                        </div>
+    <div class="container">
+        <h2>올인페이 정기 결제 서비스와 기존 정기 결제 서비스의 차이점</h2>
+        <div class="comparison-cards">
+            <div class="comparison-item">
+                <div class="comparison-category">신청 방법</div>
+                <div class="comparison-content">
+                    <div class="comparison-card our-service">
+                        <h4>올인페이 정기 결제 서비스</h4>
+                        <p>온라인 간편 신청</p>
+                    </div>
+                    <div class="comparison-card traditional">
+                        <h4>기존 정기 결제 서비스</h4>
+                        <p>방문 또는 복잡한 서류</p>
                     </div>
                 </div>
-                
-                <div class="comparison-item">
-                    <div class="comparison-category">승인 시간</div>
-                    <div class="comparison-content">
-                        <div class="comparison-card our-service">
-                            <h4>올인페이 대출</h4>
-                            <p>5분 내 즉시 승인</p>
-                        </div>
-                        <div class="comparison-card traditional">
-                            <h4>기존 대출</h4>
-                            <p>1-3일 소요</p>
-                        </div>
+            </div>
+            
+            <div class="comparison-item">
+                <div class="comparison-category">승인 시간</div>
+                <div class="comparison-content">
+                    <div class="comparison-card our-service">
+                        <h4>올인페이 정기 결제 서비스</h4>
+                        <p>5분 내 즉시 승인</p>
+                    </div>
+                    <div class="comparison-card traditional">
+                        <h4>기존 정기 결제 서비스</h4>
+                        <p>1-3일 소요</p>
                     </div>
                 </div>
-                
-                <div class="comparison-item">
-                    <div class="comparison-category">소득증빙</div>
-                    <div class="comparison-content">
-                        <div class="comparison-card our-service">
-                            <h4>올인페이 대출</h4>
-                            <p>불필요</p>
-                        </div>
-                        <div class="comparison-card traditional">
-                            <h4>기존 대출</h4>
-                            <p>필수</p>
-                        </div>
+            </div>
+            
+            <div class="comparison-item">
+                <div class="comparison-category">소득증빙</div>
+                <div class="comparison-content">
+                    <div class="comparison-card our-service">
+                        <h4>올인페이 정기 결제 서비스</h4>
+                        <p>불필요</p>
+                    </div>
+                    <div class="comparison-card traditional">
+                        <h4>기존 정기 결제 서비스</h4>
+                        <p>필수</p>
                     </div>
                 </div>
-                
-                <div class="comparison-item">
-                    <div class="comparison-category">신용등급</div>
-                    <div class="comparison-content">
-                        <div class="comparison-card our-service">
-                            <h4>올인페이 대출</h4>
-                            <p>카드 한도 기반</p>
-                        </div>
-                        <div class="comparison-card traditional">
-                            <h4>기존 대출</h4>
-                            <p>신용등급 중요</p>
-                        </div>
+            </div>
+            
+            <div class="comparison-item">
+                <div class="comparison-category">신용등급</div>
+                <div class="comparison-content">
+                    <div class="comparison-card our-service">
+                        <h4>올인페이 정기 결제 서비스</h4>
+                        <p>카드 한도 기반</p>
+                    </div>
+                    <div class="comparison-card traditional">
+                        <h4>기존 정기 결제 서비스</h4>
+                        <p>신용등급 중요</p>
                     </div>
                 </div>
-                
-                <div class="comparison-item">
-                    <div class="comparison-category">대출 한도</div>
-                    <div class="comparison-content">
-                        <div class="comparison-card our-service">
-                            <h4>올인페이 대출</h4>
-                            <p>신용카드 한도 내</p>
-                        </div>
-                        <div class="comparison-card traditional">
-                            <h4>기존 대출</h4>
-                            <p>소득 대비 한도</p>
-                        </div>
+            </div>
+            
+            <div class="comparison-item">
+                <div class="comparison-category">정기 결제 한도</div>
+                <div class="comparison-content">
+                    <div class="comparison-card our-service">
+                        <h4>올인페이 정기 결제 서비스</h4>
+                        <p>신용카드 한도 내</p>
+                    </div>
+                    <div class="comparison-card traditional">
+                        <h4>기존 정기 결제 서비스</h4>
+                        <p>소득 대비 한도</p>
                     </div>
                 </div>
-                
-                <div class="comparison-item">
-                    <div class="comparison-category">상환 방법</div>
-                    <div class="comparison-content">
-                        <div class="comparison-card our-service">
-                            <h4>올인페이 대출</h4>
-                            <p>신용카드 결제일</p>
-                        </div>
-                        <div class="comparison-card traditional">
-                            <h4>기존 대출</h4>
-                            <p>매월 정해진 날</p>
-                        </div>
+            </div>
+            
+            <div class="comparison-item">
+                <div class="comparison-category">상환 방법</div>
+                <div class="comparison-content">
+                    <div class="comparison-card our-service">
+                        <h4>올인페이 정기 결제 서비스</h4>
+                        <p>신용카드 결제일</p>
+                    </div>
+                    <div class="comparison-card traditional">
+                        <h4>기존 정기 결제 서비스</h4>
+                        <p>매월 정해진 날</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+    <!-- 4번째 섹션: 결제항목 -->
+    <section class="poster-section" id="payment-items">
+        <img src="images/003.png" alt="올인페이 결제항목 포스터" class="poster-image">
     </section>
 
-    <!-- 대출 신청 전 확인사항 -->
+    <!-- 5번째 섹션: 자격조건 -->
     <section class="requirements" id="requirements">
         <div class="container">
-            <h2>대출 신청 전 꼭 확인해야 할 부분</h2>
+            <h2>정기 결제 서비스 신청 전 꼭 확인해야 할 부분</h2>
             <div class="requirement-cards">
                 <div class="requirement-card available">
-                    <h3>대출 이용 가능 고객</h3>
+                    <h3>정기 결제 서비스 이용 가능 고객</h3>
                     <ul>
                         <li>만 19세 이상 성인</li>
                         <li>신용카드 보유자</li>
@@ -284,7 +385,7 @@
                     </ul>
                 </div>
                 <div class="requirement-card unavailable">
-                    <h3>대출 이용 불가능 고객</h3>
+                    <h3>정기 결제 서비스 이용 불가능 고객</h3>
                     <ul>
                         <li>미성년자</li>
                         <li>신용카드 미보유자</li>
@@ -297,10 +398,15 @@
         </div>
     </section>
 
-    <!-- 대출금 결제방법 섹션 -->
+    <!-- 6번째 섹션: 부동산결제 -->
+    <section class="poster-section" id="realestate">
+        <img src="images/002.png" alt="올인페이 부동산결제 포스터" class="poster-image">
+    </section>
+
+    <!-- 7번째 섹션: 결제방법 -->
     <section class="payment-method" id="payment-method">
         <div class="container">
-            <h2>대출금 결제방법</h2>
+            <h2>정기 결제 서비스 결제방법</h2>
             <div class="payment-content">
                 <div class="payment-info">
                     <h3>수기 결제방식</h3>
@@ -325,7 +431,7 @@
                     <ul>
                         <li>온라인 결제가 어려운 분</li>
                         <li>카드 결제를 직접 하기 부담스러운 분</li>
-                        <li>간편한 대출 서비스를 원하는 분</li>
+                        <li>간편한 정기 결제 서비스를 원하는 분</li>
                         <li>빠른 현금화가 필요한 분</li>
                     </ul>
                 </div>
@@ -333,10 +439,10 @@
         </div>
     </section>
 
-    <!-- 대출수수료 안내 섹션 -->
+    <!-- 8번째 섹션: 수수료 -->
     <section class="fees" id="fees">
         <div class="container">
-            <h2>대출수수료 안내</h2>
+            <h2>정기 결제 서비스 수수료 안내</h2>
             <div class="fee-table">
                 <div class="fee-item">
                     <div class="fee-range">500만원 미만</div>
@@ -351,199 +457,20 @@
                     <div class="fee-rate">10%</div>
                 </div>
             </div>
-            <p class="fee-note">* 수수료는 대출 금액에 따라 차등 적용됩니다.</p>
+            <p class="fee-note">* 수수료는 정기 결제 금액에 따라 차등 적용됩니다.</p>
         </div>
     </section>
 
-    <!-- 고객 후기 섹션 -->
-    <section class="reviews" id="reviews">
-        <div class="container">
-            <h2>실제 사용 고객들의 후기</h2>
-            <div class="reviews-container">
-                <div class="reviews-track">
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"급한 돈이 필요했는데 5분 만에 승인받아서 정말 도움이 됐어요. 서류도 복잡하지 않아서 좋았습니다."</p>
-                        <div class="reviewer">김○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"신용등급이 낮아서 일반 대출이 어려웠는데, 카드 한도로 대출받을 수 있어서 정말 감사해요."</p>
-                        <div class="reviewer">이○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"온라인으로 간단하게 신청하고 바로 입금받아서 편리했습니다. 상환도 카드 결제일과 같아서 관리하기 쉬워요."</p>
-                        <div class="reviewer">박○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"비상금이 급히 필요했는데 올인페이 덕분에 빠르게 해결할 수 있었어요. 정말 감사합니다!"</p>
-                        <div class="reviewer">최○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"소득증빙 서류 준비가 번거로웠는데, 카드 한도만으로 대출받을 수 있어서 너무 편했어요."</p>
-                        <div class="reviewer">정○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"은행 대출은 시간이 오래 걸려서 포기했는데, 올인페이는 정말 빠르네요. 추천합니다!"</p>
-                        <div class="reviewer">한○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"신용카드 한도는 충분한데 현금이 부족했을 때 정말 유용했어요. 간편하고 빠릅니다."</p>
-                        <div class="reviewer">조○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"복잡한 심사 과정 없이 바로 승인받아서 놀랐어요. 정말 신기한 서비스입니다."</p>
-                        <div class="reviewer">윤○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"상환도 카드 결제일과 같아서 관리하기 편해요. 별도 계좌 관리할 필요가 없어서 좋습니다."</p>
-                        <div class="reviewer">강○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"금융감독원 등록 업체라서 안전하다고 생각했는데, 실제로도 믿을 만한 서비스네요."</p>
-                        <div class="reviewer">송○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"온라인으로 간단하게 신청할 수 있어서 좋아요. 방문할 필요도 없고 정말 편리합니다."</p>
-                        <div class="reviewer">임○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"수수료도 합리적이고, 대출 과정도 투명해서 믿고 이용할 수 있어요."</p>
-                        <div class="reviewer">오○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"급전이 필요했는데 하루 만에 해결할 수 있어서 정말 다행이었어요. 감사합니다!"</p>
-                        <div class="reviewer">서○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"신용등급 때문에 일반 대출이 어려웠는데, 올인페이 덕분에 원하는 금액을 받을 수 있었어요."</p>
-                        <div class="reviewer">노○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"카드 한도 활용 대출이라는 개념이 신기했는데, 실제로 정말 유용하네요."</p>
-                        <div class="reviewer">배○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"고객센터 상담도 친절하고, 궁금한 점들을 잘 설명해주셔서 좋았어요."</p>
-                        <div class="reviewer">문○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"대출 신청부터 입금까지 정말 빠르네요. 급한 상황에서 정말 도움이 됐습니다."</p>
-                        <div class="reviewer">양○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"신용카드만 있으면 누구나 이용할 수 있어서 좋아요. 진입장벽이 낮습니다."</p>
-                        <div class="reviewer">구○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"상환 방법도 간단하고, 이자 계산도 투명해서 믿고 이용할 수 있어요."</p>
-                        <div class="reviewer">신○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"비상금 마련이 어려웠는데 올인페이 덕분에 쉽게 해결할 수 있었어요. 추천합니다!"</p>
-                        <div class="reviewer">허○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"온라인 신청이 정말 간단해요. 복잡한 절차 없이 바로 승인받을 수 있어서 좋습니다."</p>
-                        <div class="reviewer">고○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"신용카드 한도 내에서 자유롭게 대출받을 수 있어서 정말 편리해요."</p>
-                        <div class="reviewer">민○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"급한 현금이 필요할 때 정말 유용한 서비스입니다. 빠르고 간편해요."</p>
-                        <div class="reviewer">유○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"대출 과정이 투명하고, 수수료도 합리적이어서 만족스러워요."</p>
-                        <div class="reviewer">전○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"신용등급이 낮아도 카드 한도만 있으면 이용할 수 있어서 정말 좋아요."</p>
-                        <div class="reviewer">지○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"상환도 카드 결제일과 같아서 관리하기 편하고, 별도 절차가 없어서 좋습니다."</p>
-                        <div class="reviewer">차○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"금융감독원 등록 업체라서 안전하다고 생각했는데, 실제로도 믿을 만해요."</p>
-                        <div class="reviewer">안○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"복잡한 서류 준비 없이 온라인으로 간단하게 신청할 수 있어서 정말 편리해요."</p>
-                        <div class="reviewer">홍○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"대출 승인까지 5분도 안 걸려서 정말 놀랐어요. 빠르고 효율적입니다."</p>
-                        <div class="reviewer">표○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"신용카드 한도 활용 대출이라는 새로운 개념이 정말 유용하네요. 추천합니다!"</p>
-                        <div class="reviewer">남○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"급전이 필요했는데 하루 만에 해결할 수 있어서 정말 다행이었어요."</p>
-                        <div class="reviewer">도○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"온라인으로 간단하게 신청하고 바로 입금받아서 편리했습니다. 상환도 카드 결제일과 같아서 관리하기 쉬워요."</p>
-                        <div class="reviewer">라○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"신용등급이 낮아서 일반 대출이 어려웠는데, 카드 한도로 대출받을 수 있어서 정말 감사해요."</p>
-                        <div class="reviewer">마○○님</div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-rating">★★★★★</div>
-                        <p class="review-text">"급한 돈이 필요했는데 5분 만에 승인받아서 정말 도움이 됐어요. 서류도 복잡하지 않아서 좋았습니다."</p>
-                        <div class="reviewer">바○○님</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
-    <!-- 자주하는 질문 섹션 -->
+    <!-- 10번째 섹션: Q&A -->
     <section class="faq" id="faq">
         <div class="container">
-            <h2>자주하는 질문</h2>
+            <h2>Q&A</h2>
             <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>올인페이 대출은 어떻게 이용하나요?</h3>
+                        <h3>올인페이 정기 결제 서비스은 어떻게 이용하나요?</h3>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
@@ -552,11 +479,11 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>대출 한도는 얼마까지 가능한가요?</h3>
+                        <h3>정기 결제 서비스 한도는 얼마까지 가능한가요?</h3>
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        <p>신용카드의 잔여 한도 내에서 대출받으실 수 있습니다. 최대 1,000만원까지 가능합니다.</p>
+                        <p>신용카드의 잔여 한도 내에서 정기 결제 서비스받으실 수 있습니다. 최대 1,000만원까지 가능합니다.</p>
                     </div>
                 </div>
                 <div class="faq-item">
