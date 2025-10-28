@@ -1097,7 +1097,7 @@ body {
 @media (max-width: 768px) {
     .hero {
         background: url('images/hero-m.png');
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         height: 70vh;
@@ -1109,10 +1109,10 @@ body {
 @media (max-width: 480px) {
     .hero {
         background: url('images/hero-m.png');
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 60vh;
+        height: 70vh;
         min-height: 500px;
         margin-top: 50px;
     }
