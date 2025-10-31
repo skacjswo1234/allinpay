@@ -42,8 +42,9 @@ body {
 }
 
 .logo-img {
-    height: 90px;
-    width: auto;
+    width: 90px;
+    height: 70px;
+    object-fit: contain;
     display: block;
 }
 
@@ -61,7 +62,7 @@ body {
 }
 
 .nav-list li a {
-    color: #1e293b;
+    color: #1e3a8a;
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
@@ -79,14 +80,14 @@ body {
     transform: translateX(-50%);
     width: 0;
     height: 3px;
-    background: linear-gradient(90deg, #DAA520, #FFD700);
+    background: linear-gradient(90deg, #1e3a8a, #1e40af);
     transition: width 0.3s ease;
     border-radius: 2px;
 }
 
 .nav-list li a:hover {
-    color: #DAA520;
-    background: rgba(218, 165, 32, 0.1);
+    color: #1e40af;
+    background: rgba(30, 58, 138, 0.1);
     transform: translateY(-2px);
 }
 
@@ -147,8 +148,9 @@ body {
 }
 
 .logo-img-mobile {
+    width: 75px;
     height: 75px;
-    width: auto;
+    object-fit: contain;
     display: block;
 }
 
@@ -178,7 +180,7 @@ body {
 }
 
 .nav-mobile-list li a {
-    color: #1e293b;
+    color: #1e3a8a;
     text-decoration: none;
     font-weight: 600;
     font-size: 17px;
@@ -195,14 +197,14 @@ body {
     position: absolute;
     left: 0;
     opacity: 0;
-    color: #DAA520;
+    color: #1e3a8a;
     transition: opacity 0.3s ease;
 }
 
 .nav-mobile-list li a:hover {
-    color: #DAA520;
+    color: #1e40af;
     padding-left: 20px;
-    background: rgba(218, 165, 32, 0.05);
+    background: rgba(30, 58, 138, 0.05);
 }
 
 .nav-mobile-list li a:hover::before {
@@ -251,7 +253,53 @@ body {
 }
 
 
-/* 통계 섹션 */
+/* 통계 섹션 (고객현황) */
+.stats-section {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #f8fafc;
+}
+
+.stats-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* PC 화면용 이미지 */
+.stats-desktop {
+    display: block;
+}
+
+/* 모바일 화면용 이미지 */
+.stats-mobile {
+    display: none;
+}
+
+/* PC 화면에서 고객현황 이미지 설정 (1920x1080) */
+@media (min-width: 769px) {
+    .stats-desktop {
+        display: block;
+    }
+    
+    .stats-mobile {
+        display: none;
+    }
+}
+
+/* 모바일 화면에서 고객현황 이미지 설정 */
+@media (max-width: 768px) {
+    .stats-desktop {
+        display: none;
+    }
+    
+    .stats-mobile {
+        display: block;
+    }
+}
+
+/* 기존 통계 섹션 스타일 (사용하지 않지만 유지) */
 .stats {
     padding: 80px 0;
     background: #f8fafc;
@@ -357,6 +405,98 @@ body {
     margin-right: 15px;
     font-weight: bold;
     flex-shrink: 0;
+}
+
+/* 결제항목 섹션 */
+.payment-items-section {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #f8fafc;
+}
+
+.payment-items-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* PC 화면용 이미지 */
+.payment-items-desktop {
+    display: block;
+}
+
+/* 모바일 화면용 이미지 */
+.payment-items-mobile {
+    display: none;
+}
+
+/* PC 화면에서 결제항목 이미지 설정 */
+@media (min-width: 769px) {
+    .payment-items-desktop {
+        display: block;
+    }
+    
+    .payment-items-mobile {
+        display: none;
+    }
+}
+
+/* 모바일 화면에서 결제항목 이미지 설정 */
+@media (max-width: 768px) {
+    .payment-items-desktop {
+        display: none;
+    }
+    
+    .payment-items-mobile {
+        display: block;
+    }
+}
+
+/* 부동산결제 섹션 */
+.realestate-section {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #f8fafc;
+}
+
+.realestate-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* PC 화면용 이미지 */
+.realestate-desktop {
+    display: block;
+}
+
+/* 모바일 화면용 이미지 */
+.realestate-mobile {
+    display: none;
+}
+
+/* PC 화면에서 부동산결제 이미지 설정 */
+@media (min-width: 769px) {
+    .realestate-desktop {
+        display: block;
+    }
+    
+    .realestate-mobile {
+        display: none;
+    }
+}
+
+/* 모바일 화면에서 부동산결제 이미지 설정 */
+@media (max-width: 768px) {
+    .realestate-desktop {
+        display: none;
+    }
+    
+    .realestate-mobile {
+        display: block;
+    }
 }
 
 /* 포스터 섹션 */
@@ -689,7 +829,7 @@ body {
 }
 
 .comparison-card.our-service {
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
     color: white;
 }
 
@@ -826,7 +966,53 @@ body {
     }
 }
 
-/* 대출 신청 전 확인사항 */
+/* 자격조건 섹션 */
+.requirements-section {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #f8fafc;
+}
+
+.requirements-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* PC 화면용 이미지 */
+.requirements-desktop {
+    display: block;
+}
+
+/* 모바일 화면용 이미지 */
+.requirements-mobile {
+    display: none;
+}
+
+/* PC 화면에서 자격조건 이미지 설정 */
+@media (min-width: 769px) {
+    .requirements-desktop {
+        display: block;
+    }
+    
+    .requirements-mobile {
+        display: none;
+    }
+}
+
+/* 모바일 화면에서 자격조건 이미지 설정 */
+@media (max-width: 768px) {
+    .requirements-desktop {
+        display: none;
+    }
+    
+    .requirements-mobile {
+        display: block;
+    }
+}
+
+/* 대출 신청 전 확인사항 (기존 스타일 유지) */
 .requirements {
     padding: 80px 0;
     background: white;
@@ -889,7 +1075,25 @@ body {
 /* 대출금 결제방법 섹션 */
 .payment-method {
     padding: 80px 0;
-    background: #f8fafc;
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-method::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.03)"/></svg>');
+    opacity: 0.5;
+}
+
+.payment-method .container {
+    position: relative;
+    z-index: 1;
 }
 
 .payment-method h2 {
@@ -897,7 +1101,8 @@ body {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 60px;
-    color: #1e293b;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .payment-content {
@@ -911,12 +1116,12 @@ body {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #1e293b;
+    color: #ffffff;
 }
 
 .payment-info p {
     font-size: 16px;
-    color: #64748b;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 30px;
 }
 
@@ -929,17 +1134,27 @@ body {
 .payment-step {
     display: flex;
     align-items: center;
-    padding: 15px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    color: #ffffff;
+}
+
+.payment-step:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .step-icon {
-    width: 30px;
-    height: 30px;
-    background: #2563eb;
-    color: white;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #1e293b;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -947,20 +1162,23 @@ body {
     margin-right: 15px;
     font-weight: bold;
     flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(251, 191, 36, 0.3);
 }
 
 .recommended-users {
-    background: white;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
 .recommended-users h3 {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: #1e293b;
+    color: #ffffff;
 }
 
 .recommended-users ul {
@@ -970,7 +1188,7 @@ body {
 .recommended-users li {
     padding: 8px 0;
     font-size: 16px;
-    color: #64748b;
+    color: rgba(255, 255, 255, 0.9);
     position: relative;
     padding-left: 20px;
 }
@@ -979,7 +1197,7 @@ body {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #10b981;
+    color: #fbbf24;
     font-weight: bold;
 }
 
@@ -1054,7 +1272,7 @@ body {
 .reviews-track {
     display: flex;
     gap: 30px;
-    animation: scroll-reviews 40s linear infinite;
+    animation: scroll-reviews 120s linear infinite;
     width: max-content;
 }
 
@@ -1313,25 +1531,65 @@ body {
 
 .hero-full-poster {
     width: 100%;
-    max-width: 1400px;
     height: auto;
     display: block;
 }
 
-/* PC 화면에서 히어로 이미지 더 넓게 */
-@media (min-width: 1024px) {
-    .hero-full-poster {
-        max-width: 100%;
+/* PC 화면용 이미지 */
+.hero-desktop {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 모바일 화면용 이미지 */
+.hero-mobile {
+    display: none;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* PC 화면에서 히어로 이미지 설정 (1920x1080) */
+@media (min-width: 769px) {
+    .hero {
+        height: auto;
+        min-height: calc(100vh - 70px);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+    
+    .hero-desktop {
+        display: block;
         width: 100%;
-        max-height: 800px;
-        object-fit: contain;
+        height: auto;
+    }
+    
+    .hero-mobile {
+        display: none;
+    }
+    
+    .hero-full-poster.hero-desktop {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 }
 
-/* 반응형 디자인 */
+/* 모바일 화면에서 히어로 이미지 설정 (1080x1920) */
 @media (max-width: 768px) {
     .hero {
         margin-top: 60px;
+    }
+    
+    .hero-desktop {
+        display: none;
+    }
+    
+    .hero-mobile {
+        display: block;
     }
 }
 
@@ -1380,6 +1638,7 @@ body {
     
     .reviews-track {
         gap: 20px;
+        animation: scroll-reviews 180s linear infinite;
     }
     
     .review-card {
