@@ -428,6 +428,52 @@ body {
     flex-shrink: 0;
 }
 
+/* 추가 섹션 (s-6) */
+.extra-section {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: #f8fafc;
+}
+
+.extra-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* PC 화면용 이미지 */
+.extra-desktop {
+    display: block;
+}
+
+/* 모바일 화면용 이미지 */
+.extra-mobile {
+    display: none;
+}
+
+/* PC 화면에서 추가 섹션 이미지 설정 */
+@media (min-width: 769px) {
+    .extra-desktop {
+        display: block;
+    }
+    
+    .extra-mobile {
+        display: none;
+    }
+}
+
+/* 모바일 화면에서 추가 섹션 이미지 설정 */
+@media (max-width: 768px) {
+    .extra-desktop {
+        display: none;
+    }
+    
+    .extra-mobile {
+        display: block;
+    }
+}
+
 /* 결제항목 섹션 */
 .payment-items-section {
     padding: 0;
@@ -1406,6 +1452,165 @@ body {
     transform: rotate(45deg);
 }
 
+/* 하단 서비스 안내 섹션 */
+.bottom-services {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.bottom-services::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+.bottom-services .container {
+    position: relative;
+    z-index: 1;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(30, 64, 175, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.service-card.highlight {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    border-color: #fbbf24;
+}
+
+.service-card.highlight:hover {
+    box-shadow: 0 20px 60px rgba(251, 191, 36, 0.4);
+}
+
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.service-card:hover .service-icon {
+    animation: none;
+    transform: scale(1.2) rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.service-card.highlight h3 {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.service-card p {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.service-card.highlight p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .bottom-services {
+        padding: 60px 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+    
+    .service-icon {
+        font-size: 40px;
+    }
+    
+    .service-card h3 {
+        font-size: 18px;
+    }
+    
+    .service-card p {
+        font-size: 14px;
+    }
+}
+
 /* 카톡신청 버튼 */
 .kakao-application {
     position: fixed;
@@ -1414,9 +1619,7 @@ body {
     right: 0;
     z-index: 1000;
     padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid #e2e8f0;
+    background: transparent;
 }
 
 .kakao-btn {
@@ -1437,6 +1640,7 @@ body {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    text-decoration: none;
 }
 
 .kakao-btn:hover {
@@ -1477,6 +1681,7 @@ body {
 .phone-btn {
     background: linear-gradient(135deg, #DAA520, #FFD700);
     color: white;
+    text-decoration: none;
 }
 
 .phone-btn:hover {
